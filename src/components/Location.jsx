@@ -3,10 +3,22 @@ import MapIllustration from './MapIllustration.jsx'
 import Photo from './Photo.jsx'
 
 export default function Location() {
+  const mapSrc = contact.mapEmbedUrl?.trim() || contact.mapEmbedFallbackUrl
+
   return (
     <section id="location" className="section loc">
       <div className="map">
-        <MapIllustration />
+        {mapSrc ? (
+          <iframe
+            src={mapSrc}
+            title={`Map showing our office at ${contact.building}, ${contact.street}`}
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        ) : (
+          <MapIllustration />
+        )}
       </div>
       <div className="loc-info">
         <h2 className="h2">Find our office</h2>

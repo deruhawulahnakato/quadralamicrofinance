@@ -5,6 +5,7 @@ import Services from './components/Services.jsx'
 import Values from './components/Values.jsx'
 import Team from './components/Team.jsx'
 import Steps from './components/Steps.jsx'
+import Apply from './components/Apply.jsx'
 import Location from './components/Location.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
@@ -20,6 +21,7 @@ export default function App() {
         <Values />
         <Team />
         <Steps />
+        <Apply />
         <Location />
         <Contact />
       </main>

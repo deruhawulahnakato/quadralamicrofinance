@@ -34,7 +34,7 @@ export default function Header() {
             </li>
           ))}
           <li>
-            <SectionLink className="btn btn-red" href="#contact" onNavigate={close}>Apply for a loan</SectionLink>
+            <SectionLink className="btn btn-red" href="#apply" onNavigate={close}>Apply for a loan</SectionLink>
           </li>
         </ul>
       </nav>

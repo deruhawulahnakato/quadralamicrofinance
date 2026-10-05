@@ -4,15 +4,15 @@
 // ─────────────────────────────────────────────────────────────
 
 export const company = {
-  name: 'Quadral ‘A’ Microfinance',
-  suffix: 'Services Limited',
-  fullName: 'Quadral ‘A’ Microfinance Services Limited',
+  name: 'Quadral A Micro Finance',
+  suffix: 'Services Ltd',
+  fullName: 'Quadral A Micro Finance Services Ltd',
 }
 
 export const nav = [
   { label: 'About us', href: '#about' },
   { label: 'Services', href: '#services' },
-  { label: 'Our team', href: '#team' },
+  { label: 'Our CEO', href: '#team' },
   { label: 'Find us', href: '#location' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -56,6 +56,22 @@ export const services = [
   },
 ]
 
+// icon: 'briefcase' | 'book'   color: 'red' | 'navy'
+export const consulting = [
+  {
+    icon: 'briefcase',
+    color: 'navy',
+    title: 'SME & microfinance consulting',
+    text: 'Practical advice for small businesses, SACCOs and microfinance institutions on business planning, credit management, record keeping and sustainable growth.',
+  },
+  {
+    icon: 'book',
+    color: 'red',
+    title: 'Financial literacy consulting',
+    text: 'Training for individuals, groups, schools and organisations on budgeting, saving, responsible borrowing and planning for the future.',
+  },
+]
+
 // icon: 'shield' | 'people' | 'eye'
 export const values = [
   { icon: 'shield', title: 'Integrity', text: 'We do what we say, handle every shilling with care, and treat each client honestly.' },
@@ -63,21 +79,31 @@ export const values = [
   { icon: 'eye', title: 'Transparency', text: 'Clear terms, clear rates and no hidden charges, so you always know where you stand.' },
 ]
 
-// Add a photo by putting it in public/images and setting `photo`.
-// Without a photo, an illustrated placeholder (avatar) is shown.
-// avatar: 'long' | 'short' | 'bald'
-export const team = [
-  { name: 'Lutaaya Moses', role: 'Managing Director', photo: '/images/team-1.jpg' },
-  { name: '[Full name]', role: '[Operations Manager]', photo: null, avatar: 'long' },
-  { name: '[Full name]', role: '[Credit Officer]', photo: null, avatar: 'short' },
-  { name: '[Full name]', role: '[Accountant]', photo: null, avatar: 'bald' },
-]
+export const ceo = {
+  name: 'Lutaaya Moses',
+  role: 'Chief Executive Officer',
+  photo: '/images/team-1.jpg',
+  quote:
+    'Financial freedom is not about how much you earn, but how well you manage what you have. Save a portion of every shilling, borrow only for what will grow, and keep a record of every transaction. Small, disciplined steps taken today build the strong families and businesses of tomorrow.',
+  // Short takeaways shown under the quote
+  tips: ['Save consistently', 'Borrow to grow', 'Keep good records'],
+}
 
 export const steps = [
   { title: 'Visit or call us', text: 'Come to our office or give us a call to talk about what you need.' },
   { title: 'Apply with our help', text: 'Our officers guide you through the application and the documents required.' },
   { title: 'Grow with confidence', text: 'Receive your funds and keep our support as your business or household grows.' },
 ]
+
+// Online application form. Submissions are emailed by Web3Forms (web3forms.com)
+// to the address the access key was created with. This key is safe to publish.
+export const applyForm = {
+  accessKey: 'b282e933-bb40-4814-9297-0e64466d2e46',
+  loanTypes: ['Business loan', 'Consumer loan', 'Emergency loan', 'SME / microfinance consulting', 'Financial literacy training'],
+  periods: ['1 month', '3 months', '6 months', '12 months', 'Other / not sure'],
+  contactTimes: ['Any time', 'Morning (9 am – 12 pm)', 'Afternoon (12 pm – 4 pm)'],
+  thankYou: 'Thank you! Your application has been received. One of our officers will call you within 1 working day.',
+}
 
 export const contact = {
   building: 'Estery Complex, Room 35',
@@ -89,5 +115,11 @@ export const contact = {
   email: 'quadralamicrofinance@gmail.com',
   // Replace with the Google Business Profile link once it is verified
   mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Estery+Complex+Bombo+Road+Kubiri+Kampala',
+  // Live map shown on the site. For an exact pin: open the office in Google Maps →
+  // Share → Embed a map → copy only the link inside src="..." and paste it here.
+  mapEmbedUrl:
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7472612802662!2d32.56849307435305!3d0.34195696398759157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb90b6d41293%3A0xbafb87c3dd494c83!2sESTERY%20COMPLEX!5e0!3m2!1sen!2sug!4v1791006364876!5m2!1sen!2sug',
+  // Used when mapEmbedUrl is empty. If both are null, the illustrated map is shown.
+  mapEmbedFallbackUrl: 'https://www.google.com/maps?q=Estery+Complex,+Bombo+Road,+Kubiri,+Kampala&z=16&output=embed',
   officePhoto: null, // e.g. '/images/office-front.jpg'
 }

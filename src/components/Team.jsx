@@ -1,30 +1,37 @@
-import { team } from '../data/content.js'
-import Avatar from './Avatar.jsx'
-
-const corners = (i, n) =>
-  i === 0 ? { borderTopLeftRadius: 40 } : i === n - 1 ? { borderTopRightRadius: 40 } : undefined
+import { ceo } from '../data/content.js'
+import Icon from './Icons.jsx'
 
 export default function Team() {
   return (
     <section id="team" className="section">
-      <h2 className="h2">Meet our team</h2>
-      <p className="lead intro">The people behind every loan, ready to listen and guide you at each step.</p>
-      <div className="team">
-        {team.map((m, i) => (
-          <div key={i} className="member">
-            <div className="photo" style={corners(i, team.length)}>
-              {m.photo ? (
-                <img src={m.photo} alt={`${m.name}, ${m.role}`} style={{ objectPosition: 'center top' }} loading="lazy" />
-              ) : (
-                <Avatar variant={m.avatar} />
-              )}
-            </div>
+      <div className="ceo">
+        <div className="ceo-portrait">
+          <div className="ceo-ring">
+            <img src={ceo.photo} alt={`${ceo.name}, ${ceo.role}`} loading="lazy" />
+          </div>
+          <span className="ceo-badge">CEO</span>
+        </div>
+
+        <div className="ceo-text">
+          <span className="eyebrow">Leadership</span>
+          <h2 className="h2">A word from our CEO</h2>
+          <blockquote>
+            <span className="q-mark" aria-hidden="true">“</span>
+            <p>{ceo.quote}</p>
+          </blockquote>
+          <ul className="ceo-tips">
+            {ceo.tips.map((t) => (
+              <li key={t}><Icon name="check" strokeWidth={2.4} />{t}</li>
+            ))}
+          </ul>
+          <div className="ceo-sign">
+            <span className="sign-line" aria-hidden="true" />
             <div>
-              <h3>{m.name}</h3>
-              <span className="role">{m.role}</span>
+              <h3>{ceo.name}</h3>
+              <span className="role">{ceo.role}</span>
             </div>
           </div>
-        ))}
+        </div>
       </div>
     </section>
   )
