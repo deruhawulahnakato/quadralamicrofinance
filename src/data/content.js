@@ -83,9 +83,11 @@ export const ceo = {
   name: 'Lutaaya Moses',
   role: 'Chief Executive Officer',
   photo: '/images/team-1.jpg',
+  // Headline of the quote; the second part is underlined
+  headline: ['Financial freedom is not about how much you earn, but ', 'how well you manage what you have.'],
   quote:
-    'Financial freedom is not about how much you earn, but how well you manage what you have. Save a portion of every shilling, borrow only for what will grow, and keep a record of every transaction. Small, disciplined steps taken today build the strong families and businesses of tomorrow.',
-  // Short takeaways shown under the quote
+    'Save a portion of every shilling, borrow only for what will grow, and keep a record of every transaction. Small, disciplined steps taken today build the strong families and businesses of tomorrow.',
+  // Short takeaways shown on the CEO card
   tips: ['Save consistently', 'Borrow to grow', 'Keep good records'],
 }
 
